@@ -1,0 +1,330 @@
+body {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: Roboto, sans-serif, Arial, Helvetica;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+nav {
+  text-align: center;
+}
+
+nav .nav-logo {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+nav .nav-zone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  font-weight: bold;
+  background-color: #eaeaea;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(33, 35, 38, 0.1) inset;
+          box-shadow: 0px 3px 5px 0px rgba(33, 35, 38, 0.1) inset;
+}
+
+button {
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#e471db), to(#a75cdc));
+  background-image: linear-gradient(to bottom right, #e471db, #a75cdc);
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+/**main - function**/
+@media screen and (min-width: 600px) {
+  #search {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  #search .searchBox {
+    width: 50%;
+    margin-bottom: 0;
+    background-color: white;
+  }
+  #search .searchBox .searchBox-title {
+    padding-top: 1.5rem;
+  }
+  #search .searchBox .searchBox-button {
+    margin-top: 3rem;
+  }
+  #search .function {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #search {
+    width: 30%;
+    float: right;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #search .searchBox {
+    width: 100%;
+  }
+  #search .searchBox .searchBox-title {
+    color: #9356DC;
+  }
+  #search .function {
+    width: 100%;
+  }
+  #search .function .function-title {
+    text-align: center;
+    margin-top: 2.5em;
+    color: #9356DC;
+  }
+}
+
+.searchBox {
+  background-color: #f6f6f6;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.searchBox .searchBox-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 2.5rem;
+  margin-top: 0;
+}
+
+.function-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.function-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.function-content .function-content_number {
+  width: 10px;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: -10px;
+  margin-bottom: 10px;
+  border-radius: 50% 50%;
+  padding: 0.3rem;
+  background-color: #9356dc;
+  z-index: 1;
+}
+
+.function-content_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 80%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #f6f6f6;
+  z-index: 0;
+}
+
+.function-content_box i {
+  margin-left: 1.5rem;
+  text-align: center;
+  color: grey;
+  width: 10%;
+}
+
+.function-content_box .fa-store {
+  color: #9356DC;
+}
+
+.function-content_box p {
+  text-align: left;
+  padding-left: 1.5rem;
+  font-size: 14px;
+  width: 90%;
+}
+
+.function-content_box--violet {
+  background-color: #f5edff;
+}
+
+/**main - restaurant**/
+#restaurant {
+  background-color: #f6f6f6;
+}
+
+@media screen and (min-width: 900px) {
+  #restaurant {
+    width: 70%;
+  }
+}
+
+.restaurant-title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.restaurant-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .restaurant-box {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .restaurant-box .restaurant-content {
+    width: 45%;
+  }
+}
+
+.restaurant-content {
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  width: 90%;
+  line-height: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.restaurant-content .restaurant-content_link {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant-content .restaurant-content_link:hover {
+  color: #9356DC;
+}
+
+.restaurant-content .restaurant-content_promo {
+  text-align: center;
+  color: green;
+  background-color: #99E2D0;
+  padding: 1rem;
+  width: 20%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.restaurant-content .restaurant-content_image {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-radius: 20px 20px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.restaurant-content .restaurant-content_name {
+  padding-left: 1rem;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.restaurant-content .restaurant-content_place {
+  padding-left: 1rem;
+  margin-bottom: -1rem;
+  margin-right: 0;
+  width: 80%;
+}
+
+.restaurant-content .restaurant-content_icon {
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0;
+  float: right;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/**footer-page**/
+footer {
+  background-color: #474f4e;
+  padding-bottom: 1.5rem;
+  color: white;
+}
+
+footer .footer-logo {
+  font-family: shrikhand, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+footer .footer-link {
+  list-style-type: none;
+  padding-bottom: 0.5rem;
+}
+
+footer .footer-link i {
+  padding-right: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
