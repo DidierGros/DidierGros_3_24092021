@@ -1,10 +1,10 @@
 body {
-  min-width: 320px;
+  /**min-width: 320px;**/
   max-width: 1440px;
   margin: 0 auto;
   font-family: Roboto, sans-serif, Arial, Helvetica;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 nav {
@@ -32,6 +32,21 @@ nav .nav-zone {
   background-color: #eaeaea;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(33, 35, 38, 0.1) inset;
           box-shadow: 0px 3px 5px 0px rgba(33, 35, 38, 0.1) inset;
+}
+
+/**nav page menu**/
+.NavMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 button {
@@ -64,12 +79,6 @@ button {
     margin-bottom: 0;
     background-color: white;
   }
-  #search .searchBox .searchBox-title {
-    padding-top: 1.5rem;
-  }
-  #search .searchBox .searchBox-button {
-    margin-top: 3rem;
-  }
   #search .function {
     width: 45%;
   }
@@ -77,26 +86,16 @@ button {
 
 @media screen and (min-width: 900px) {
   #search {
-    width: 30%;
-    float: right;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-column-gap: 3.5rem;
+            column-gap: 3.5rem;
   }
   #search .searchBox {
-    width: 100%;
-  }
-  #search .searchBox .searchBox-title {
-    color: #9356DC;
+    width: 30%;
   }
   #search .function {
-    width: 100%;
-  }
-  #search .function .function-title {
-    text-align: center;
-    margin-top: 2.5em;
-    color: #9356DC;
+    width: 30%;
   }
 }
 
@@ -111,6 +110,10 @@ button {
   font-weight: bold;
   padding-top: 2.5rem;
   margin-top: 0;
+}
+
+.searchBox .searchBox-button {
+  cursor: pointer;
 }
 
 .function-title {
@@ -167,6 +170,15 @@ button {
   margin-bottom: 1rem;
   background-color: #f6f6f6;
   z-index: 0;
+  cursor: pointer;
+}
+
+.function-content_box:hover {
+  background-color: #f5edff;
+}
+
+.function-content_box:hover:hover i {
+  color: #9356DC;
 }
 
 .function-content_box i {
@@ -176,19 +188,11 @@ button {
   width: 10%;
 }
 
-.function-content_box .fa-store {
-  color: #9356DC;
-}
-
 .function-content_box p {
   text-align: left;
   padding-left: 1.5rem;
   font-size: 14px;
   width: 90%;
-}
-
-.function-content_box--violet {
-  background-color: #f5edff;
 }
 
 /**main - restaurant**/
@@ -198,7 +202,7 @@ button {
 
 @media screen and (min-width: 900px) {
   #restaurant {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -226,16 +230,17 @@ button {
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
   margin-top: 0;
+  width: 100%;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .restaurant-box {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 100%;
   }
   .restaurant-box .restaurant-content {
-    width: 45%;
+    width: 20%;
   }
 }
 
@@ -302,6 +307,7 @@ button {
   font-size: 20px;
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 /**footer-page**/
@@ -313,7 +319,7 @@ footer {
 
 footer .footer-logo {
   font-family: shrikhand, sans-serif;
-  font-size: 18px;
+  font-size: 25px;
   font-style: italic;
   padding-top: 1rem;
   padding-left: 1rem;
@@ -324,7 +330,200 @@ footer .footer-link {
   padding-bottom: 0.5rem;
 }
 
+footer .footer-link a {
+  text-decoration: none;
+  color: white;
+}
+
 footer .footer-link i {
   padding-right: 1rem;
+}
+
+.HeadbandWrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0rem;
+  position: relative;
+  z-index: 0;
+}
+
+.HeadbandWrapper img {
+  width: 100%;
+}
+
+.Menu {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  background-color: #f6f6f6;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.RestaurantName {
+  width: 100%;
+  font-family: Shrikhand;
+  font-size: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.RestaurantName .fa-heart {
+  font-size: 20px;
+  margin-right: 0rem;
+  padding: 1rem;
+}
+
+.MenuBlock {
+  width: 100%;
+}
+
+.MenuBlock #MenuStarter {
+  margin-bottom: 5rem;
+  /**mediaquery**/
+}
+
+.MenuBlock #MenuDish {
+  margin-bottom: 5rem;
+  /**mediaquery**/
+}
+
+.MenuBlock #MenuDessert {
+  margin-bottom: 5rem;
+  /**mediaquery**/
+}
+
+/**Cartes Menu**/
+.MenuTitle {
+  width: 30%;
+}
+
+.MenuTitle h2 {
+  margin-bottom: 0;
+}
+
+.MenuTitle .MenuTitle-underline {
+  width: 30%;
+  border-top: 5px solid #99E2D0;
+  padding: 0.5rem;
+}
+
+.MenuContentBox {
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  line-height: 0.3rem;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.MenuContentBox:hover {
+  width: 80%;
+}
+
+.MenuContentBox .MenuContentTitle {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.MenuContentBox .MenuContentDesc {
+  width: 60%;
+  font-size: 14px;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.MenuContentBox .MenuContentPrice {
+  width: 20%;
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  padding-right: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.MenuContent {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.MenuCheck {
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #99E2D0;
+  width: 95%;
+  text-align: right;
+}
+
+.MenuCheck .fa-check-circle {
+  font-size: 30px;
+  padding: 2rem;
+  color: white;
+}
+
+/**Bouton Menu**/
+.MenuOrder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.MenuOrder button {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.MenuContentBox {
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.MenuContentBox:hover {
+  width: 89%;
 }
 /*# sourceMappingURL=main.css.map */

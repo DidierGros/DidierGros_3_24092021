@@ -1,0 +1,191 @@
+.HeadbandWrapper{    
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0rem;
+    position:relative;
+    z-index: 0;
+    img{
+        width: 100%;
+    }   
+}
+
+.Menu{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background-color: $background-color-gris;
+    margin-top: -6rem;    
+    position: relative;
+    z-index: 1;
+}
+
+.RestaurantName{
+    width: 100%;
+    font-family: Shrikhand;
+    font-size: 18px;
+    display: inline-flex;
+    justify-content: space-between; 
+    align-items: center;
+    h1{
+        padding-left: 1rem;
+    }     
+    .fa-heart{
+        cursor: pointer;
+        font-size: 20px;
+        padding-right: 1rem;                       
+    }
+}
+
+
+.MenuBlock{
+    width: 100%;
+
+    @media screen and (min-width: 900px){
+        display: inline-flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+              
+    }  
+
+    #MenuStarter{
+    margin-bottom: 5rem;
+    padding-left: 1rem;
+        @media screen and (min-width: 900px){
+            width: 30%;}    
+    }
+
+    #MenuDish{
+        margin-bottom: 5rem;
+        padding-left: 1rem;
+            @media screen and (min-width: 900px){
+                width: 30%;}   
+     }
+
+    #MenuDessert{
+        margin-bottom: 5rem;
+        padding-left: 1rem;   
+        @media screen and (min-width: 900px){
+            width: 30%;}  
+    }
+       
+}
+
+
+/**Cartes Menu**/
+
+.MenuTitle{
+    width: 40%;
+    h2{
+        padding-left: 0.5rem;
+        margin-bottom: 0;
+     }
+    .MenuTitle-underline{
+        width: 30%;
+        border-top: 5px solid $tertiary-color;
+        margin-left: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.MenuContent{
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.MenuContentBox{
+    @include box-shadow;
+    line-height: 0.3rem;
+    width: 90%;   
+    height: auto;
+    background-color: white;
+    position: absolute;    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;    
+    transition-property: width, background-color, border-radius;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
+    &:hover{
+        width: 66%;    
+        background-color: rgb(245, 237, 255);
+        border-radius: 20px 0 0 20px;
+    @media screen and (min-width: 900px){ &:hover{ width: 22%;}}
+    
+    }
+
+    @media screen and (min-width: 900px){
+        width: 30%;}   
+    
+    .MenuContentTitle{
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;        
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;      
+    }
+
+    .MenuContentDesc{
+        width: 75%;
+        font-size: 12px;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .MenuContentPrice{
+        width: 10%;        
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 0;
+    }   
+}
+
+.MenuCheck{
+   @include box-shadow;
+   background-color: $tertiary-color;
+   width: 90%;
+   text-align: right;
+   .fa-check-circle{
+       cursor: pointer;
+       font-size: 30px;
+       padding: 1.5rem;
+       color: white;
+   }
+}
+
+
+/**Bouton Menu**/
+
+.MenuOrder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+        cursor: pointer;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 5rem;
+        @media screen and (min-width: 900px){
+            font-size: 40px;}  
+
+    }
+    
+}
+
+
