@@ -6,6 +6,11 @@
     z-index: 0;
     img{
         width: 100%;
+        @media screen and (min-width: 900px){
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+        }  
     }   
 }
 
@@ -13,7 +18,7 @@
     width: 100%;
     border-radius: 20px 20px 0 0;
     background-color: $background-color-gris;
-    margin-top: -6rem;    
+    margin-top: -1rem;    
     position: relative;
     z-index: 1;
 }
@@ -43,8 +48,7 @@
         display: inline-flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        column-gap: 1.5rem;
-              
+        column-gap: 1.5rem;         
     }  
 
     #MenuStarter{
@@ -90,6 +94,7 @@
 .MenuContent{
     align-items: center;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .MenuContentBox{
@@ -102,22 +107,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    cursor: pointer;    
     transition-property: width, background-color, border-radius;
     transition-duration: 2s;
     transition-timing-function: ease;
-    transition-delay: 0.5s;
-    &:hover{
-        width: 66%;    
-        background-color: rgb(245, 237, 255);
-        border-radius: 20px 0 0 20px;
-    @media screen and (min-width: 900px){ &:hover{ width: 22%;}}
-    
-    }
+    transition-delay: 0.1s;  
 
     @media screen and (min-width: 900px){
-        width: 30%;}   
-    
+        width: 30%;} 
+       
     .MenuContentTitle{
         width: 100%;
         padding-left: 1rem;
@@ -157,13 +154,14 @@
 .MenuCheck{
    @include box-shadow;
    background-color: $tertiary-color;
-   width: 90%;
+   width: 100%;
    text-align: right;
    .fa-check-circle{
-       cursor: pointer;
        font-size: 30px;
-       padding: 1.5rem;
+       padding: 1.7rem;
        color: white;
+       transform: rotate(0);
+       transition: transform .1s;
    }
 }
 
@@ -183,7 +181,6 @@
         margin-bottom: 5rem;
         @media screen and (min-width: 900px){
             font-size: 40px;}  
-
     }
     
 }

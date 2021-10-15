@@ -1,6 +1,6 @@
 button{
     border: none;
-    @include box-shadow;
+    @include button-box-shadow;
     @include buttonGradient;
     font-size: 16px;
     color: white;

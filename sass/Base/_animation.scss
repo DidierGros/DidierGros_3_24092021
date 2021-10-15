@@ -1,8 +1,79 @@
-/**.MenuContentBox{
-    transition-property: width;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0.5s;
+
+/**Général**/
+
+button{
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+
+    to{
+        box-shadow: rgba(0, 0, 0, 0.027) 0px 0px 30px;
+    }    
+}
+
+
+/**Accueil**/
+
+.restaurant-content{
+    transform: scale(1);
+    transition: transform .4s .5s;
     &:hover{
-        width: 80%;}
-}**/
+     transform:scale(1.07)
+    }
+ }
+
+/**Menu**/
+
+.MenuContent{
+    animation: apparition 6s ease;
+
+    &:hover .MenuContentBox{
+        width: 66%;    
+        background-color: rgb(245, 237, 255);
+        border-radius: 20px 0 0 20px;}
+
+    @media screen and (min-width: 900px)
+        { &:hover .MenuContentBox{
+             width: 24%;}
+    }      
+    
+    &:hover .fa-check-circle{
+        transform: rotate(280deg)
+    }
+
+}
+
+@keyframes apparition {
+
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }   
+}
+
+/* .MenuContentBox{
+    transition-property: width, background-color, border-radius;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+        &:hover{
+        width: 66%;    
+        background-color: rgb(245, 237, 255);
+        border-radius: 20px 0 0 20px;}
+
+        @media screen and (min-width: 900px)
+        { &:hover{ width: 24%;}
+    }       
+}  */
+
+/* .fa-check-circle{
+    transform: rotate(0);
+    transition: transform .5s;
+}
+
+ */
+
+ 

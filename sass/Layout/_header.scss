@@ -19,9 +19,11 @@ nav{
 .NavMenu{
     @include flex-center;
     justify-content: space-around;
+    height: 70px;
+    font-size: 30px;
     .fa-arrow-left{
-        cursor: pointer;
         text-align: left;
+        color: black;
         
     }
 }

@@ -21,3 +21,8 @@
 @mixin buttonGradient{
    background-image: linear-gradient(to bottom right,rgb(228, 113, 219), rgb(167, 92, 220) );
 }
+
+@mixin button-box-shadow{
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 0px 0px;
+}
