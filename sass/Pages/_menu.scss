@@ -1,3 +1,14 @@
+.NavMenu{
+    @media screen and (min-width: 900px){
+        justify-content: start;
+        column-gap: 450px;
+        align-items: center;
+            .fa-arrow-left{
+                margin-left: 50px;
+            }}
+}
+
+
 .HeadbandWrapper{    
     width: 100%;
     text-align: center;
@@ -7,7 +18,7 @@
     img{
         width: 100%;
         @media screen and (min-width: 900px){
-        height: 500px;
+        height: 300px;
         object-fit: cover;
         object-position: center;
         }  
@@ -174,15 +185,13 @@
     justify-content: center;
     align-items: center;
     button{
-        cursor: pointer;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        margin-top: 2.5rem;
-        margin-bottom: 5rem;
         @media screen and (min-width: 900px){
-            font-size: 40px;}  
-    }
-    
+            font-size: 20px;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            margin-top: 2.5rem;
+            margin-bottom: 5rem; }  
+    }    
 }
 
 

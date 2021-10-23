@@ -1,9 +1,10 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap");
 body {
   min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
-  font-family: Roboto, sans-serif, Arial, Helvetica;
+  font-family: "Roboto", sans-serif, Arial, Helvetica;
   box-sizing: content-box;
 }
 
@@ -43,7 +44,8 @@ button {
   border-radius: 20px 20px 20px 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px;
   background-image: linear-gradient(to bottom right, #e471db, #a75cdc);
-  font-size: 16px;
+  cursor: pointer;
+  font-size: 18px;
   color: white;
   font-weight: bold;
   padding: 1rem;
@@ -106,15 +108,15 @@ button {
   align-items: center;
 }
 .function-content .function-content_number {
-  width: 10px;
+  width: 15px;
   color: white;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   margin-right: -10px;
   margin-bottom: 10px;
   border-radius: 50% 50%;
-  padding: 0.3rem;
+  padding: 0.5rem;
   background-color: #9356dc;
   z-index: 1;
 }
@@ -265,7 +267,7 @@ footer {
   color: white;
 }
 footer .footer-logo {
-  font-family: shrikhand, sans-serif;
+  font-family: "Shrikhand";
   font-size: 25px;
   font-style: italic;
   padding-top: 1rem;
@@ -283,6 +285,17 @@ footer .footer-link i {
   padding-right: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+  .NavMenu {
+    justify-content: start;
+    column-gap: 450px;
+    align-items: center;
+  }
+  .NavMenu .fa-arrow-left {
+    margin-left: 50px;
+  }
+}
+
 .HeadbandWrapper {
   width: 100%;
   text-align: center;
@@ -295,7 +308,7 @@ footer .footer-link i {
 }
 @media screen and (min-width: 900px) {
   .HeadbandWrapper img {
-    height: 500px;
+    height: 300px;
     object-fit: cover;
     object-position: center;
   }
@@ -463,16 +476,13 @@ footer .footer-link i {
   justify-content: center;
   align-items: center;
 }
-.MenuOrder button {
-  cursor: pointer;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-top: 2.5rem;
-  margin-bottom: 5rem;
-}
 @media screen and (min-width: 900px) {
   .MenuOrder button {
-    font-size: 40px;
+    font-size: 20px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -483,16 +493,56 @@ button {
 
 @keyframes pulse {
   to {
-    box-shadow: rgba(0, 0, 0, 0.027) 0px 0px 30px;
+    box-shadow: rgba(53, 23, 23, 0.3) 0px 0px 30px;
   }
 }
-/**Accueil**/
+/**Accueil : Card**/
 .restaurant-content {
   transform: scale(1);
   transition: transform 0.4s 0.5s;
 }
 .restaurant-content:hover {
   transform: scale(1.07);
+}
+
+/**Accueil : Heart**/
+.fa-heart {
+  position: relative;
+}
+
+.fa-heart:hover {
+  transition: opacity 200ms ease-in-out;
+}
+
+.fa-heart:hover::after {
+  opacity: 0;
+}
+
+.fa-heart:hover::before {
+  opacity: 1;
+}
+
+.fa-heart::after {
+  opacity: 1;
+  font-weight: 100;
+  align-self: center;
+  transition: opacity 400ms ease-in;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "\f004";
+}
+
+.fa-heart::before {
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 400ms ease-out;
+  font-weight: 600;
 }
 
 /**Menu**/
@@ -521,25 +571,5 @@ button {
     opacity: 1;
   }
 }
-/* .MenuContentBox{
-    transition-property: width, background-color, border-radius;
-    transition-duration: 2s;
-    transition-timing-function: ease;
-    transition-delay: 0.1s;
-        &:hover{
-        width: 66%;    
-        background-color: rgb(245, 237, 255);
-        border-radius: 20px 0 0 20px;}
-
-        @media screen and (min-width: 900px)
-        { &:hover{ width: 24%;}
-    }       
-}  */
-/* .fa-check-circle{
-    transform: rotate(0);
-    transition: transform .5s;
-}
-
- */
 
 /*# sourceMappingURL=style.css.map */

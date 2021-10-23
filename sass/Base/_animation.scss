@@ -8,12 +8,12 @@ button{
 @keyframes pulse {
 
     to{
-        box-shadow: rgba(0, 0, 0, 0.027) 0px 0px 30px;
+        box-shadow: rgba(53, 23, 23, 0.3) 0px 0px 30px;
     }    
 }
 
 
-/**Accueil**/
+/**Accueil : Card**/
 
 .restaurant-content{
     transform: scale(1);
@@ -22,6 +22,47 @@ button{
      transform:scale(1.07)
     }
  }
+
+
+/**Accueil : Heart**/
+
+ .fa-heart {
+    position: relative;
+}
+.fa-heart:hover {
+    transition: opacity 200ms ease-in-out;
+}
+.fa-heart:hover::after {
+    opacity: 0;
+}
+.fa-heart:hover::before {
+    opacity: 1;
+}
+.fa-heart::after {
+    opacity: 1;
+    font-weight: 100;
+    align-self: center;
+    transition: opacity 400ms ease-in;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+}
+.fa-heart::before {
+    opacity: 0;
+    background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 400ms ease-out;
+    font-weight: 600;
+}
+
+
+
+
 
 /**Menu**/
 
@@ -54,26 +95,3 @@ button{
     }   
 }
 
-/* .MenuContentBox{
-    transition-property: width, background-color, border-radius;
-    transition-duration: 2s;
-    transition-timing-function: ease;
-    transition-delay: 0.1s;
-        &:hover{
-        width: 66%;    
-        background-color: rgb(245, 237, 255);
-        border-radius: 20px 0 0 20px;}
-
-        @media screen and (min-width: 900px)
-        { &:hover{ width: 24%;}
-    }       
-}  */
-
-/* .fa-check-circle{
-    transform: rotate(0);
-    transition: transform .5s;
-}
-
- */
-
- 
