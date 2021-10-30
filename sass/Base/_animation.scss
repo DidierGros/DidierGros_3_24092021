@@ -2,6 +2,15 @@
 /**Général**/
 
 button{
+    transform: scale(1);
+    transition: transform 1s;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+/* button{
     animation: pulse 0.5s infinite;
 }
 
@@ -10,7 +19,7 @@ button{
     to{
         box-shadow: rgba(53, 23, 23, 0.3) 0px 0px 30px;
     }    
-}
+} */
 
 
 /**Accueil : Card**/
@@ -24,7 +33,7 @@ button{
  }
 
 
-/**Accueil : Heart**/
+/** Heart**/
 
  .fa-heart {
     position: relative;
@@ -60,38 +69,70 @@ button{
     font-weight: 600;
 }
 
-
-
-
-
-/**Menu**/
+/**Menu Animation**/
 
 .MenuContent{
-    animation: apparition 6s ease;
-
-    &:hover .MenuContentBox{
-        width: 66%;    
-        background-color: rgb(245, 237, 255);
-        border-radius: 20px 0 0 20px;}
-
-    @media screen and (min-width: 900px)
-        { &:hover .MenuContentBox{
-             width: 24%;}
-    }      
-    
-    &:hover .fa-check-circle{
-        transform: rotate(280deg)
-    }
+    z-index: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: all 0.5s ease;
 
 }
 
-@keyframes apparition {
+.fa-check-circle{
+    transform: translate(20px, 0) rotate(0) ;
+    transition: transform 1.5s ease;
+    opacity: 0;
+    transition: opacity 0 0.6s;
+}
 
-    from{
-        opacity: 0;
+
+.MenuBox{
+    cursor: pointer;
+    &:hover{
+        .MenuContent{
+            transform: scaleX(0.70);
+            border-radius: 20px 0 0 20px; 
+        }
+        .MenuContentCheck .MenuCheck .fa-check-circle{
+            transform: translate(0, 0) rotate(-360deg);
+            opacity: 1; 
+        }   
     }
-    to{
-        opacity: 1;
-    }   
+}
+
+
+/**Menu apparition**/
+
+.MenuBox{
+    animation: slide 2s ease-in-out ;
+}
+
+@keyframes slide{
+0%{
+    opacity: 0;
+    transform: translateY(20px);
+    
+}
+
+25%{
+    opacity: 0.25;
+}
+
+50%{
+    opacity: 0.5;
+    
+}
+
+75%{
+    opacity: 0.75;
+        
+}
+
+100%{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 }
 
