@@ -3,9 +3,11 @@
 @import "Base/_base.scss";
 @import "Base/_typographie.scss";
 @import "Layout/_header.scss";
-@import "components/_buttons.scss";
-@import "Pages/_home.scss";
-@import "components/_card.scss";
 @import "Layout/_footer.scss";
+@import "Pages/_home.scss";
 @import "Pages/_menu.scss";
+@import "Components/_card.scss";
+@import "Components/_menucard.scss";
+@import "Components/_buttons.scss";
+@import "Base/_mediaqueries.scss";
 @import "Base/_animation.scss";

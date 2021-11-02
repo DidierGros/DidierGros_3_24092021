@@ -39,17 +39,29 @@ nav .nav-zone {
   color: black;
 }
 
-button {
-  border: none;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px;
-  background-image: linear-gradient(to bottom right, #e471db, #a75cdc);
-  cursor: pointer;
-  font-size: 18px;
+/**footer-page**/
+footer {
+  background-color: #474f4e;
+  padding-bottom: 1.5rem;
   color: white;
-  font-weight: bold;
-  padding: 1rem;
-  margin-bottom: 3rem;
+}
+footer .footer-logo {
+  font-family: "Shrikhand";
+  font-size: 25px;
+  font-style: italic;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+footer .footer-link {
+  list-style-type: none;
+  padding-bottom: 0.5rem;
+}
+footer .footer-link a {
+  text-decoration: none;
+  color: white;
+}
+footer .footer-link i {
+  padding-right: 1rem;
 }
 
 /**main - function**/
@@ -193,6 +205,82 @@ button {
   }
 }
 
+.HeadbandWrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0rem;
+  position: relative;
+  z-index: 0;
+}
+.HeadbandWrapper img {
+  width: 100%;
+}
+
+.Menu {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  background-color: #f6f6f6;
+  margin-top: -1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.RestaurantName {
+  width: 100%;
+  font-family: Shrikhand;
+  font-size: 18px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.RestaurantName h1 {
+  padding-left: 1rem;
+}
+.RestaurantName .fa-heart {
+  cursor: pointer;
+  font-size: 20px;
+  padding-right: 1rem;
+}
+
+/**Bloc Menu**/
+.MenuBlock {
+  width: 100%;
+}
+.MenuBlock #MenuStarter {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.MenuBlock #MenuDish {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.MenuBlock #MenuDessert {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.MenuTitle {
+  width: 40%;
+}
+.MenuTitle h2 {
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+}
+.MenuTitle .MenuTitle-underline {
+  width: 30%;
+  border-top: 5px solid #99E2D0;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/**Bouton Menu**/
+.MenuOrder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .restaurant-content {
   border-radius: 20px 20px 20px 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -260,215 +348,55 @@ button {
   opacity: 0;
 }
 
-/**footer-page**/
-footer {
-  background-color: #474f4e;
-  padding-bottom: 1.5rem;
-  color: white;
-}
-footer .footer-logo {
-  font-family: "Shrikhand";
-  font-size: 25px;
-  font-style: italic;
-  padding-top: 1rem;
-  padding-left: 1rem;
-}
-footer .footer-link {
-  list-style-type: none;
-  padding-bottom: 0.5rem;
-}
-footer .footer-link a {
-  text-decoration: none;
-  color: white;
-}
-footer .footer-link i {
-  padding-right: 1rem;
-}
-
-@media screen and (min-width: 800px) {
-  .NavMenu {
-    justify-content: start;
-    column-gap: 450px;
-    align-items: center;
-  }
-  .NavMenu .fa-arrow-left {
-    margin-left: 50px;
-  }
-}
-
-.HeadbandWrapper {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 0rem;
-  position: relative;
-  z-index: 0;
-}
-.HeadbandWrapper img {
-  width: 100%;
-}
-@media screen and (min-width: 800px) {
-  .HeadbandWrapper img {
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-.Menu {
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-  background-color: #f6f6f6;
-  margin-top: -1rem;
-  position: relative;
-  z-index: 1;
-}
-
-.RestaurantName {
-  width: 100%;
-  font-family: Shrikhand;
-  font-size: 18px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.RestaurantName h1 {
-  padding-left: 1rem;
-}
-.RestaurantName .fa-heart {
-  cursor: pointer;
-  font-size: 20px;
-  padding-right: 1rem;
-}
-
-/* #MenuStarter{
-    @media screen and (min-width:$mediaqueries-tab) {
-        display: grid;
-        grid-template-columns: 30% 30% 30%;
-        column-gap: 10px;
-        .MenuTitle{
-            grid-column-start: 1;
-            grid-column-end: 4;
-        }
-
-}
-
-}
- */
-/* .MenuBlock{
-    width: 100%;
-
-    @media screen and (min-width:$mediaqueries-tab){
-        display: inline-flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        column-gap: 1.5rem;
-    }  
-
-    #MenuStarter{
-    margin-bottom: 3rem;
-    padding-left: 1rem;
-        @media screen and (min-width: $mediaqueries-tab){
-            width: 30%;}    
-    }
-
-    #MenuDish{
-        margin-bottom: 3rem;
-        padding-left: 1rem;
-            @media screen and (min-width: $mediaqueries-tab){
-                width: 30%;}   
-     }
-
-    #MenuDessert{
-        margin-bottom: 3rem;
-        padding-left: 1rem;   
-            @media screen and (min-width: $mediaqueries-tab){
-            width: 30%;}  
-    }      
-} 
- */
 /**Cartes Menu**/
-.MenuTitle {
-  width: 40%;
-}
-.MenuTitle h2 {
-  padding-left: 0.5rem;
-  margin-bottom: 0;
-}
-.MenuTitle .MenuTitle-underline {
-  width: 30%;
-  border-top: 5px solid #99E2D0;
-  margin-left: 0.5rem;
-  margin-bottom: 1rem;
-}
-
 .MenuBox {
-  width: 90%;
-  margin-bottom: 5rem;
-  margin-right: auto;
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 .MenuContent {
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 100%;
-  height: auto;
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: white;
   position: absolute;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 0;
+  width: 100%;
+  z-index: 2;
   display: grid;
-  grid-template-columns: 90% 10%;
-}
-
-.MenuContentBox {
-  margin-left: 1rem;
-  margin-right: 0;
-  padding: 0;
-  width: 80%;
-  height: auto;
-  position: relative;
+  grid-template-columns: 80% 20%;
 }
 
 .MenuContentTitle {
-  width: 100%;
+  width: 80%;
   padding-left: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: relative;
+  margin-bottom: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .MenuContentDesc {
-  width: 100%;
-  font-size: 12px;
+  width: 80%;
   padding-left: 1rem;
-  padding-top: 0;
-  padding-bottom: 1rem;
   margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-  position: relative;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  grid-column-start: 1;
+  grid-row-start: 2;
 }
 
 .MenuContentPrice {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-right: 2rem;
   width: 100%;
-  height: auto;
-  font-weight: bold;
   font-size: 20px;
-  position: relative;
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .MenuCheck {
@@ -476,25 +404,71 @@ footer .footer-link i {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #99E2D0;
   width: 100%;
-  height: 95px;
+  height: 85px;
   text-align: right;
   margin-right: 0;
   z-index: -2;
 }
 .MenuCheck .fa-check-circle {
-  font-size: 30px;
-  padding: 2rem;
+  font-size: 25px;
+  padding: 1.7rem;
   color: #fffefe;
 }
 
-/**Bouton Menu**/
-.MenuOrder {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px;
+  background-image: linear-gradient(to bottom right, #e471db, #a75cdc);
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  margin-bottom: 3rem;
 }
-@media screen and (min-width: 800px) {
+
+/* Page accueil 
+code à déplacer */
+/* Page Menu */
+/* .NavMenu{
+     @media screen and (min-width:$mediaqueries-tab){
+    justify-content: start;
+    column-gap: 450px;
+    align-items: center;
+        .fa-arrow-left{
+            margin-left: 50px;
+        }
+    }
+} */
+@media screen and (min-width: 550px) {
+  .HeadbandWrapper img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .MenuBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .MenuBlock #MenuStarter {
+    width: 30%;
+  }
+  .MenuBlock #MenuDish {
+    width: 30%;
+    margin-left: -3.5rem;
+  }
+  .MenuBlock #MenuDessert {
+    width: 30%;
+    margin-left: -3.5rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
   .MenuOrder button {
     font-size: 20px;
     padding-left: 3rem;
@@ -504,7 +478,7 @@ footer .footer-link i {
   }
 }
 
-/**Général**/
+/**Bouton-validation**/
 button {
   transform: scale(1);
   transition: transform 1s;
@@ -514,16 +488,6 @@ button:hover {
   transform: scale(1.2);
 }
 
-/* button{
-    animation: pulse 0.5s infinite;
-}
-
-@keyframes pulse {
-
-    to{
-        box-shadow: rgba(53, 23, 23, 0.3) 0px 0px 30px;
-    }    
-} */
 /**Accueil : Card**/
 .restaurant-content {
   transform: scale(1);
@@ -576,27 +540,27 @@ button:hover {
 /**Menu Animation**/
 .MenuContent {
   z-index: 1;
-  transform: scaleX(1);
+  transform: width, border-radius;
   transform-origin: left;
   transition: all 0.5s ease;
 }
 
 .fa-check-circle {
-  transform: translate(20px, 0) rotate(0);
-  transition: transform 1.5s ease;
+  transform: translate(30px, 0) rotate(0);
   opacity: 0;
-  transition: opacity 0 0.6s;
+  transition: all 2s ease;
 }
 
 .MenuBox {
   cursor: pointer;
 }
 .MenuBox:hover .MenuContent {
-  transform: scaleX(0.7);
+  width: 80%;
+  background-color: #f5edff;
   border-radius: 20px 0 0 20px;
 }
-.MenuBox:hover .MenuContentCheck .MenuCheck .fa-check-circle {
-  transform: translate(0, 0) rotate(-360deg);
+.MenuBox:hover .MenuCheck .fa-check-circle {
+  transform: translate(0, 0) rotate(-720deg);
   opacity: 1;
 }
 

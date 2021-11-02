@@ -1,31 +1,31 @@
 /**main - function**/
 
 #search{   
-     @media screen and (min-width: 600px){
-        display: inline-flex;
-        justify-content: space-between;
-        width: 100%;
+    @media screen and (min-width: 600px){
+       display: inline-flex;
+       justify-content: space-between;
+       width: 100%;
 
-        .searchBox{
-            width: 50%;                       
-            margin-bottom: 0;
-            background-color: white;
-        }
-        .function{
-            width: 45%;
-        }
-    }
+       .searchBox{
+           width: 50%;                       
+           margin-bottom: 0;
+           background-color: white;
+       }
+       .function{
+           width: 45%;
+       }
+   }
 
-    @media screen and (min-width: 900px){
-        justify-content: space-around;
-        column-gap: 3.5rem;
-        .searchBox{
-            width: 30%;
-        }
-        .function{
-            width: 30%;
-        }
-    }           
+   @media screen and (min-width: 900px){
+       justify-content: space-around;
+       column-gap: 3.5rem;
+       .searchBox{
+           width: 30%;
+       }
+       .function{
+           width: 30%;
+       }
+   }           
 }    
 
 .searchBox{    

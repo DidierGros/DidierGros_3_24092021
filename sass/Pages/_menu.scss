@@ -1,14 +1,3 @@
-.NavMenu{
-    @media screen and (min-width: $mediaqueries-tab){
-        justify-content: start;
-        column-gap: 450px;
-        align-items: center;
-            .fa-arrow-left{
-                margin-left: 50px;
-            }
-        }
-}
-
 .HeadbandWrapper{    
     width: 100%;
     text-align: center;
@@ -17,11 +6,6 @@
     z-index: 0;
     img{
         width: 100%;
-        @media screen and (min-width:$mediaqueries-tab){
-        height: 300px;
-        object-fit: cover;
-        object-position: center;
-        }  
     }   
 }
 
@@ -50,59 +34,27 @@
         padding-right: 1rem;                       
     }
 }
+/**Bloc Menu**/
 
-/* #MenuStarter{
-    @media screen and (min-width:$mediaqueries-tab) {
-        display: grid;
-        grid-template-columns: 30% 30% 30%;
-        column-gap: 10px;
-        .MenuTitle{
-            grid-column-start: 1;
-            grid-column-end: 4;
-        }
 
-}
-
-}
- */
-
-/* .MenuBlock{
+.MenuBlock{
     width: 100%;
-
-    @media screen and (min-width:$mediaqueries-tab){
-        display: inline-flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        column-gap: 1.5rem;
-    }  
-
     #MenuStarter{
-    margin-bottom: 3rem;
-    padding-left: 1rem;
-        @media screen and (min-width: $mediaqueries-tab){
-            width: 30%;}    
-    }
-
-    #MenuDish{
-        margin-bottom: 3rem;
         padding-left: 1rem;
-            @media screen and (min-width: $mediaqueries-tab){
-                width: 30%;}   
-     }
-
+        padding-right: 1rem;
+    }
+    #MenuDish{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     #MenuDessert{
-        margin-bottom: 3rem;
-        padding-left: 1rem;   
-            @media screen and (min-width: $mediaqueries-tab){
-            width: 30%;}  
-    }      
-} 
- */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
 
 
-/**Cartes Menu**/
-
- .MenuTitle{
+.MenuTitle{
     width: 40%;
     h2{
         padding-left: 0.5rem;
@@ -116,90 +68,6 @@
     }
 }
 
-.MenuBox{
-    width: 90%;
-    margin-bottom: 5rem;
-    margin-right: auto;
-}
-
-.MenuContent{
-    @include box-shadow;
-    width: 100%;   
-    height: auto;
-    background-color: white;
-    position: absolute;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-right: 0;
-    display: grid;
-    grid-template-columns: 90% 10%;   
-}      
-
-.MenuContentBox{
-    margin-left: 1rem;
-    margin-right: 0;
-    padding: 0;
-    width: 80%;
-    height:auto;
-    position: relative;           
-}
-
-.MenuContentTitle{
-    width: 100%;
-    padding-left: 1rem;
-    padding-top: 0.5rem;        
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: relative;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;           
-}
-
-.MenuContentDesc{
-    width: 100%;
-    font-size: 12px;
-    padding-left: 1rem;
-    padding-top: 0;
-    padding-bottom: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
-    position: relative;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;    
-}
-
-.MenuContentPrice{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-right: 2rem;
-    width: 100%;
-    height:auto;         
-    font-weight: bold;
-    font-size: 20px;
-    position: relative;          
-}
-
-.MenuCheck{
-   @include box-shadow;
-   background-color: $tertiary-color;
-   width: 100%;
-   height: 95px;
-   text-align: right;
-   margin-right: 0;
-   z-index: -2;
-    .fa-check-circle{
-       font-size: 30px;
-       padding: 2rem;
-       color: rgb(255, 254, 254);
-   }
-}
-
 /**Bouton Menu**/
 
 .MenuOrder{
@@ -207,14 +75,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    button{
-        @media screen and (min-width: $mediaqueries-tab){
-            font-size: 20px;
-            padding-left: 3rem;
-            padding-right: 3rem;
-            margin-top: 2.5rem;
-            margin-bottom: 5rem; }  
-    }    
 }
 
 

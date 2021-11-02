@@ -1,0 +1,59 @@
+
+/* Page accueil 
+code à déplacer */
+
+
+
+/* Page Menu */
+
+/* .NavMenu{
+     @media screen and (min-width:$mediaqueries-tab){
+    justify-content: start;
+    column-gap: 450px;
+    align-items: center;
+        .fa-arrow-left{
+            margin-left: 50px;
+        }
+    }
+} */
+
+.HeadbandWrapper{    
+    img{
+        @media screen and (min-width:$mediaqueries-tab){
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        }
+    }
+}
+
+.MenuBlock{
+    @media screen and (min-width: 850px){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+    #MenuStarter{
+        width: 30%;        
+        }
+    #MenuDish{
+        width: 30%; 
+        margin-left: -3.5rem;   
+        }
+    #MenuDessert{
+        width: 30%;
+        margin-left: -3.5rem;     
+        }   
+    }
+}   
+
+.MenuOrder{    
+     button{
+        @media screen and (min-width: $mediaqueries-tab){
+        font-size: 20px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 5rem; 
+        }  
+    }     
+} 

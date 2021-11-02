@@ -1,5 +1,6 @@
 
-/**Général**/
+
+/**Bouton-validation**/
 
 button{
     transform: scale(1);
@@ -10,18 +11,6 @@ button:hover{
     transform: scale(1.2);
 }
 
-/* button{
-    animation: pulse 0.5s infinite;
-}
-
-@keyframes pulse {
-
-    to{
-        box-shadow: rgba(53, 23, 23, 0.3) 0px 0px 30px;
-    }    
-} */
-
-
 /**Accueil : Card**/
 
 .restaurant-content{
@@ -31,7 +20,6 @@ button:hover{
      transform:scale(1.07)
     }
  }
-
 
 /** Heart**/
 
@@ -72,30 +60,29 @@ button:hover{
 /**Menu Animation**/
 
 .MenuContent{
-    z-index: 1;
-    transform: scaleX(1);
+    z-index: 1;    
+    transform: width, border-radius;
     transform-origin: left;
     transition: all 0.5s ease;
 
 }
 
 .fa-check-circle{
-    transform: translate(20px, 0) rotate(0) ;
-    transition: transform 1.5s ease;
+    transform: translate(30px, 0) rotate(0) ;    
     opacity: 0;
-    transition: opacity 0 0.6s;
-}
-
+    transition: all 2s ease;    
+} 
 
 .MenuBox{
     cursor: pointer;
     &:hover{
         .MenuContent{
-            transform: scaleX(0.70);
+            width: 80%;
+            background-color: #f5edff;          
             border-radius: 20px 0 0 20px; 
         }
-        .MenuContentCheck .MenuCheck .fa-check-circle{
-            transform: translate(0, 0) rotate(-360deg);
+        .MenuCheck .fa-check-circle{
+            transform: translate(0, 0) rotate(-720deg);
             opacity: 1; 
         }   
     }
@@ -109,30 +96,30 @@ button:hover{
 }
 
 @keyframes slide{
+
 0%{
     opacity: 0;
-    transform: translateY(20px);
-    
-}
+    transform: translateY(20px);  
+    }
 
 25%{
     opacity: 0.25;
-}
+    }
 
 50%{
     opacity: 0.5;
     
-}
+    }
 
 75%{
     opacity: 0.75;
         
-}
+    }
 
 100%{
     opacity: 1;
     transform: translateY(0);
-}
+    }
 
 }
 
