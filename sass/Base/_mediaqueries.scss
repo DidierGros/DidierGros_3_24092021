@@ -1,13 +1,57 @@
 
-/* Page accueil 
-code à déplacer */
+/*---Page accueil---*/
+
+#search{   
+    @media screen and (min-width: $mediaqueries-tab){
+       display: inline-flex;
+       justify-content: space-between;
+       width: 100%;
+
+       .searchBox{
+           width: 50%;                       
+           margin-bottom: 0;
+           background-color: white;
+       }
+       .function{
+           width: 45%;
+       }
+   }
+   @media screen and (min-width:$mediaqueries-destock){
+       justify-content: space-around;
+       column-gap: 3.5rem;
+       .searchBox{
+           width: 30%;
+       }
+       .function{
+           width: 30%;
+       }
+   }           
+}    
+
+
+#restaurant{
+    @media screen and (min-width:$mediaqueries-destock){
+        width: 100%;
+    }
+}
 
 
 
-/* Page Menu */
+.restaurant-box{
+    @media screen and (min-width:$mediaqueries-destock){
+        justify-content: space-around;
+        width: 100%;
+        .restaurant-content{
+            width: 20%;
+        }
+    }  
+}
+
+
+/*---Page Menu---*/
 
 .NavMenu{
-    @media screen and (min-width:$mediaqueries-tab){
+    @media screen and (min-width:1440px){
     justify-content: start;
     column-gap: 700px;
     align-items: center;
@@ -19,7 +63,7 @@ code à déplacer */
 
 .HeadbandWrapper{    
     img{
-        @media screen and (min-width:$mediaqueries-tab){
+        @media screen and (min-width:$mediaqueries-destock){
         height: 300px;
         object-fit: cover;
         object-position: center;
@@ -28,7 +72,7 @@ code à déplacer */
 }
 
 .MenuBlock{
-    @media screen and (min-width: 850px){
+    @media screen and (min-width:$mediaqueries-destock){
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;    
@@ -48,7 +92,7 @@ code à déplacer */
 
 .MenuOrder{    
      button{
-        @media screen and (min-width: $mediaqueries-tab){
+        @media screen and (min-width:$mediaqueries-destock){
         font-size: 20px;
         padding-left: 3rem;
         padding-right: 3rem;

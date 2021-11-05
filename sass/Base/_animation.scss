@@ -23,12 +23,13 @@ button:hover{
 
 /** Heart**/
 
- .fa-heart {
+.fa-heart {
     position: relative;
 }
 .fa-heart:hover {
     transition: opacity 200ms ease-in-out;
 }
+
 .fa-heart:hover::after {
     opacity: 0;
 }
@@ -45,7 +46,7 @@ button:hover{
     right: 0;
     bottom: 0;
     left: 0;
-    content: "";
+    content: ""
 }
 .fa-heart::before {
     opacity: 0;

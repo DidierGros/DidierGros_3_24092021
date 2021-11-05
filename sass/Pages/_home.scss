@@ -1,33 +1,4 @@
 /**main - function**/
-
-#search{   
-    @media screen and (min-width: 600px){
-       display: inline-flex;
-       justify-content: space-between;
-       width: 100%;
-
-       .searchBox{
-           width: 50%;                       
-           margin-bottom: 0;
-           background-color: white;
-       }
-       .function{
-           width: 45%;
-       }
-   }
-
-   @media screen and (min-width: 900px){
-       justify-content: space-around;
-       column-gap: 3.5rem;
-       .searchBox{
-           width: 30%;
-       }
-       .function{
-           width: 30%;
-       }
-   }           
-}    
-
 .searchBox{    
     background-color: $background-color-gris;
     text-align: center;
@@ -98,15 +69,10 @@
     }
 }
 
-
-
 /**main - restaurant**/
 
 #restaurant{
     background-color: $background-color-gris;
-    @media screen and (min-width: 900px){
-        width: 100%;
-    }
 }
 
 .restaurant-title {
@@ -124,12 +90,6 @@
     column-gap: 0.5rem;
     margin-top: 0;
     width: 100%;
-    @media screen and (min-width: 900px){
-        justify-content: space-around;
-        width: 100%;
-        .restaurant-content{
-            width: 20%;}
-    }  
 }
 
 
