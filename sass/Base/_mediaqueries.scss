@@ -6,16 +6,16 @@ code à déplacer */
 
 /* Page Menu */
 
-/* .NavMenu{
-     @media screen and (min-width:$mediaqueries-tab){
+.NavMenu{
+    @media screen and (min-width:$mediaqueries-tab){
     justify-content: start;
-    column-gap: 450px;
+    column-gap: 700px;
     align-items: center;
         .fa-arrow-left{
-            margin-left: 50px;
+            margin-left: 100px;
         }
     }
-} */
+} 
 
 .HeadbandWrapper{    
     img{

@@ -45,7 +45,7 @@ button:hover{
     right: 0;
     bottom: 0;
     left: 0;
-    content: "";
+    content: "";
 }
 .fa-heart::before {
     opacity: 0;
@@ -61,8 +61,6 @@ button:hover{
 
 .MenuContent{
     z-index: 1;    
-    transform: width, border-radius;
-    transform-origin: left;
     transition: all 0.5s ease;
 
 }
@@ -92,7 +90,7 @@ button:hover{
 /**Menu apparition**/
 
 .MenuBox{
-    animation: slide 2s ease-in-out ;
+    animation: slide 2.5s linear 0.7s;
 }
 
 @keyframes slide{

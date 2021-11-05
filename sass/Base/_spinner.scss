@@ -1,16 +1,31 @@
 
 /**Loader Spinner**/
+
+header, main,footer{
+
+  animation-name: molten-pull;
+  animation-duration: 5s;
+  animation-direction: reverse;
+  animation-timing-function: linear;    
+  animation-fill-mode: forwards;
+  
+}
+
 .loader{
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.7);
-    position: absolute;
-    z-index: 500;
+    background: rgba(252, 252, 252, 0.95);
+    position: fixed;
+    animation-name: molten-push;
+    animation-duration: 5s;
+    animation-timing-function: linear;    
+    animation-fill-mode: forwards;
+
   }
   
   .LoaderSpinner{
@@ -21,8 +36,7 @@
       border-radius: 50%;
       margin-top: 10px;
       margin-bottom: 10px;
-      position: relative;
-      z-index: 500;
+      position: relative;              
     }
   
   .LoaderSpinner:before{
@@ -36,9 +50,11 @@
       right: -10px;
       bottom: -10px;
       border-radius: 50%;
-      position: absolute;
-      z-index: 700;
-      animation: spinner 1.5s linear infinite;
+      position: absolute;      
+      animation-name: spinner;
+      animation-duration: 600ms;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; 
     }
   
   .LoaderSpinner:after{
@@ -52,17 +68,123 @@
       left: -10px;
       right: -10px;
       bottom: -10px;;
-      position: absolute;
-      z-index: 700;
-      animation: spinner 1.5s linear infinite;
+      position: absolute;      
+      animation-name: spinner;
+      animation-duration: 600ms;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;    
   }
   
-  @keyframes spinner{
+
+/*Les animations*/
+
+
+  @keyframes spinner {
   
     0%{
       transform: rotate(0deg);
     }
     100%{
-      transform: rotate(360deg);
+      transform: rotate(360deg);      
     }
   } 
+
+
+
+  @keyframes molten-push {
+    0%{
+      opacity: 0.95;
+      z-index: 1000;
+    }
+
+    10%{
+      opacity: 0.9;
+    }
+
+    20%{
+      opacity: 0.8;
+    }
+
+    30%{
+      opacity:0.7;
+    }
+
+    40%{
+      opacity: 0.6;
+    }
+
+    50%{
+      opacity: 0.5;
+    }
+
+    60%{
+      opacity: 0.4;
+    }
+
+    70%{
+
+      opacity: 0.3;
+    }
+
+    80%{
+
+      opacity: 0.2;
+    }
+
+    90%{
+      opacity: 0.1;
+    }
+    
+    100%{
+      opacity: 0;
+    }
+  }
+
+
+  @keyframes molten-pull {
+    0%{
+      opacity: 0.95;      
+    }
+
+    10%{
+      opacity: 0.9;
+    }
+
+    20%{
+      opacity: 0.8;
+    }
+
+    30%{
+      opacity:0.7;
+    }
+
+    40%{
+      opacity: 0.6;
+    }
+
+    50%{
+      opacity: 0.5;
+    }
+
+    60%{
+      opacity: 0.4;
+    }
+
+    70%{
+
+      opacity: 0.3;
+    }
+
+    80%{
+
+      opacity: 0.2;
+    }
+
+    90%{
+      opacity: 0.1;
+    }
+    
+    100%{
+      opacity: 0;
+    }
+  }
